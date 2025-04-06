@@ -1,39 +1,23 @@
-.sidebar {
-  left: -8rem;
-  width: 8rem;
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
 }
-.sidebar.on {
-  left: 0;
+#page-header {
+  background: transparent !important;
 }
-.content.on {
-  margin-left: 0 !important;
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
 }
-.navbar-toggle {
-  left: 9.5rem;
+#page-header::before {
+  background: transparent !important;
 }
-.search-form-wrap {
-  right: 8rem;
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
 }
-@media (min-width: 768px) {
-  .outer,
-  .wrap {
-    width: 80rem !important;
-  }
-}
-@media (max-width: 768px) {
-  .tocbot {
-    display: none !important;
-  }
-  .sidebar {
-    left: 0;
-  }
-  .sidebar.on {
-    left: -8rem;
-  }
-  .content {
-    transform: translateX(8rem);
-  }
-  .content.on {
-    transform: translateX(0);
-  }
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
 }
